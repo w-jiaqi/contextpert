@@ -6,7 +6,8 @@ from sklearn.model_selection import train_test_split
 from contextualized.easy import ContextualizedCorrelationNetworks
 
 PATH_L1000   = '/home/user/contextulized/lincs1000.csv'
-PATH_CTLS    = '/home/user/contextulized/ctrls.csv'   
+PATH_CTLS    = '/home/user/contextulized/ctrls.csv'  
+emb_file = '/home/user/contextulized/embeddings/aido_cell_100m_lincs_embeddings.npy'
 EMBEDDINGS_PCS = 1
 N_DATA_PCS   = 50    
 CELL_TEST_SIZE = 0.20 
@@ -52,7 +53,7 @@ pert_dose   = df['pert_dose'  ].to_numpy().reshape(-1, 1)
 ignore_time = df['ignore_flag_pert_time'].to_numpy().reshape(-1, 1)
 ignore_dose = df['ignore_flag_pert_dose'].to_numpy().reshape(-1, 1)
 
-emb_file = '/home/user/contextulized/embeddings/aido_cell_100m_lincs_embeddings.npy'
+
 
 all_embeddings_raw = np.load(emb_file)
 
