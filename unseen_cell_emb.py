@@ -6,7 +6,8 @@ from sklearn.model_selection import train_test_split
 from contextualized.easy import ContextualizedCorrelationNetworks
 
 PATH_L1000   = '/home/user/contextulized/lincs1000.csv'
-PATH_CTLS    = '/home/user/contextulized/ctrls.csv'         
+PATH_CTLS    = '/home/user/contextulized/ctrls.csv'   
+EMBEDDINGS_PCS = 1
 N_DATA_PCS   = 50    
 CELL_TEST_SIZE = 0.20 
 RANDOM_STATE = 42
@@ -72,7 +73,7 @@ embeddings_scaled = scaler_embeddings.fit_transform(all_embeddings_raw)
 
 # pca
 n_embeddings_dim = embeddings_scaled.shape[1]
-n_components_for_embeddings = min(1, n_embeddings_dim)
+n_components_for_embeddings = min(EMBEDDINGS_PCS, n_embeddings_dim)
 
 pca_embeddings = PCA(n_components=n_components_for_embeddings, random_state=RANDOM_STATE)
 embeddings_pcs = pca_embeddings.fit_transform(embeddings_scaled)
