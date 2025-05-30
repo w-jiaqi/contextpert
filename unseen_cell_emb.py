@@ -6,8 +6,7 @@ from sklearn.model_selection import train_test_split
 from contextualized.easy import ContextualizedCorrelationNetworks
 
 PATH_L1000   = '/home/user/contextulized/lincs1000.csv'
-PATH_CTLS    = '/home/user/contextulized/ctrls.csv'      
-N_CTRL_PCS   = 20    
+PATH_CTLS    = '/home/user/contextulized/ctrls.csv'         
 N_DATA_PCS   = 50    
 CELL_TEST_SIZE = 0.20 
 RANDOM_STATE = 42
