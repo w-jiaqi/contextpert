@@ -13,7 +13,7 @@ CELL_TEST_SIZE = 0.20
 RANDOM_STATE = 42
 
 df = pd.read_csv(PATH_L1000, engine="pyarrow")
-# keep only compound perturbations
+# change perturbation to fit on here
 pert_to_fit_on = ['trt_lig']
 df = df[df['pert_type'].isin(pert_to_fit_on)]
 
