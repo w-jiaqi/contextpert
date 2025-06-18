@@ -1,3 +1,8 @@
+## Installation
+
+
+```bash
+pip install pandas numpy rdkit-pypi contextualized
 ## Instructions
 
 Before running any script, make sure to **set data paths and parameters at the top of each file**.
