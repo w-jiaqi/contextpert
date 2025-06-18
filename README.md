@@ -2,7 +2,7 @@
 
 Before running any script, make sure to **set data paths and parameters at the top of each file**.
 
-The core dataset, `merged4.csv`, is located in **BOX** folder.
+The full lincs dataset, `merged_output4.csv`, is in **BOX**.
 
 ---
 
@@ -16,6 +16,7 @@ Use the following scripts depending on the experimental setup:
   - One-hot encoded **cell type context**
   - One-hot encoded **perturbation context**
   - Optional inclusion of **dose** and/or **time**
+  - can fit on any pert type
 
 #### `cell_ctxt.py`
 
@@ -24,6 +25,7 @@ Use the following scripts depending on the experimental setup:
 - Requires:
   - `ctrls.csv`
   - Embedding `.npy` files (both in BOX)
+  - can fit on any pert type
 
 ---
 
@@ -32,7 +34,7 @@ Use the following scripts depending on the experimental setup:
 #### `unseen_pert.py`
 
 - Requires:
-  - `trt_cp_smiles.csv`
+  - `trt_cp_smiles.csv` file with only trt_cp perturbations with smiles
   - `ctrls.csv`
   - (Both in BOX)
 
