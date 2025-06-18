@@ -24,7 +24,7 @@ Use the following scripts depending on the experimental setup:
   - **Embedding-based** or **PCA-compressed** cell type context
 - Requires:
   - `ctrls.csv`
-  - Embedding `.npy` files (both in BOX)
+  - Embedding `.npy` files 
   - can fit on any pert type
 
 ---
