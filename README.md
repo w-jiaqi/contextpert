@@ -1,6 +1,6 @@
 ## Installation
 
-Packages: pandas, numpy, rdkit, contextualized
+Packages: pandas, numpy, rdkit, contextualized, sklearn
 
 ## Instructions 
 
