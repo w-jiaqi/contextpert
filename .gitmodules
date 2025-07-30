@@ -1,4 +1,4 @@
 [submodule "Contextualized"]
 	path = Contextualized
 	url = https://github.com/cnellington/Contextualized.git
-	branch = hpc
+	branch = tasksplit_hpc
