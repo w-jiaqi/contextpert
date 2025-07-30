@@ -1,14 +1,29 @@
 ## Installation
 
-Packages: pandas, numpy, rdkit, contextualized, sklearn
+```bash
+git clone --recurse-submodules https://github.com/cnellington/contextpert.git
+cd Contextualized
+pip install -e .
+cd ..
+pip install -r requirements.txt
+```
 
-## Instructions 
+Verify installation by running:
+```bash
+python test_installation.py
+```
 
-Before running any script, make sure to **set data paths and parameters at the top of each file**.
+which should produce a test loss on a dummy dataset.
 
-The full lincs dataset, `merged_output4.csv`, is in **BOX**.
+## Data
+Download all files from https://cmu.app.box.com/folder/290094222331 and place them in the `data/` directory.
 
----
+For debugging, consider making a smaller version of the dataset with the first 1000 rows
+```bash
+head -n 1000 data/merged_output4.csv > data/merged_output4_head.csv
+```
+
+## Run Experiments
 
 ### Table 2 Experiments: Post-Perturbation Networks
 
@@ -22,7 +37,7 @@ Use the following scripts depending on the experimental setup:
   - Optional inclusion of **dose** and/or **time**
   - can fit on any pert type
 
-#### `cell_ctxt.py`
+#### `cell_ctxt.ipynb`
 
 - Uses:
   - **Embedding-based** or **PCA-compressed** cell type context
