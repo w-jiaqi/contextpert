@@ -20,7 +20,7 @@ Download all files from https://cmu.app.box.com/folder/290094222331 and place th
 
 For debugging, consider making a smaller version of the dataset with the first 1000 rows
 ```bash
-head -n 1000 data/merged_output4.csv > data/merged_output4_head.csv
+head -n 1000 data/full_lincs.csv > data/full_lincs_head.csv
 ```
 
 ## Run Experiments
