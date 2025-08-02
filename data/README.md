@@ -11,7 +11,7 @@ The raw data can be found at the Gene Expression Omnibus (GEO) under accession n
     - From the download section at the bottom of the page,
         - download the **Level 3** data file: `GSE92742_Broad_LINCS_Level3_INF_mlr12k_n1319138x12328.gctx.gz`
         - download the landmark gene info: `GSE92742_Broad_LINCS_gene_info_delta_landmark.txt.gz`
-        - download the perturbation info: `GSE92742_Broad_LINCS_pert_info.txt.gz`
+        - download the perturbation info (contains smiles): `GSE92742_Broad_LINCS_pert_info.txt.gz`
         - download the inst info: `GSE92742_Broad_LINCS_inst_info.txt.gz`
         - download the sig metrics: `GSE92742_Broad_LINCS_sig_metrics.txt.gz`
 
