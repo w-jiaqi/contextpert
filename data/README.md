@@ -18,5 +18,5 @@ The raw data can be found at the Gene Expression Omnibus (GEO) under accession n
 2.  **Filter/Clean the Data**: Run the code in the `data_process.ipynb` file. This code will:
     - Read in gctx data file in a memory efficient manner as a pandas dataframe
     - Filter to only the landmark 977 genes instead of the full imputed transcriptome.
-    - Concatenate perturbation/expiriment information (dose, time, quality filters, etc)
+    - Concatenate perturbation/experiment information (dose, time, quality filters, etc)
     - Save as csv
