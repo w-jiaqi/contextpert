@@ -34,7 +34,7 @@ aligned_adata, attention_mask = cell_utils.align_adata(adata)
 # Get embeddings
 batch_size=32
 device='cuda'
-backbone = "aido_cell_3m"
+backbone = "aido_cell_100m"
 
 # Initialize model
 model = Embed.from_config({
@@ -52,9 +52,11 @@ all_embeddings = []
 for i in tqdm(range(0, n_samples, batch_size)):
     batch_np = X[i:i+batch_size]
     batch_tensor = torch.from_numpy(batch_np).to(torch.bfloat16).to(device)
+    attention_mask_tensor = torch.tensor(attention_mask, dtype=torch.long).to(device)
+    attention_mask_tensor = attention_mask_tensor.unsqueeze(0).expand(batch_tensor.size(0), -1)
 
     with torch.no_grad():
-        transformed = model.transform({'sequences': batch_tensor})
+        transformed = model.transform({'sequences': batch_tensor, 'attention_mask': attention_mask_tensor})
         embs = model(transformed)  # (batch_size, sequence_length, hidden_dim)
         pooled = embs.to(dtype=float).cpu().numpy()
 
