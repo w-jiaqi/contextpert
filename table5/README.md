@@ -4,7 +4,7 @@ The pipeline consists of two main components: model training and cohesion analys
 
 ## Files
 
-1. **`cell_ctxt_training.py`** - Main training script for contextualized neural networks
+1. **`ctxt_training.py`** - Main training script for contextualized neural networks
 2. **`cohesion_analysis.py`** - Label cohesion evaluation script
 
 ## Usage
@@ -14,7 +14,7 @@ The pipeline consists of two main components: model training and cohesion analys
 The script trains the model and saves all necessary results to perform label cohesion analysis.
 
 ```bash
-python cell_ctxt_training.py
+python ctxt_training.py
 ```
 
 ### 2. Label Cohesion Analysis
