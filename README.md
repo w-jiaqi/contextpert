@@ -43,7 +43,7 @@ To download preprocessed data, simply run:
 ```bash
 mkdir data
 export CONTEXTPERT_DATA_DIR=data  # or your data path
-rclone sync box:/Contextualized\ Perturbation\ Modeling $CONTEXTPERT_DATA_DIR
+rclone bisync box:/Contextualized\ Perturbation\ Modeling $CONTEXTPERT_DATA_DIR
 ```
 
 For debugging, consider making a smaller version of the dataset with the first 1000 rows
