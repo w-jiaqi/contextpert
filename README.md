@@ -15,8 +15,36 @@ python test_installation.py
 
 which should produce a test loss on a dummy dataset.
 
-## Data
-Download all files from https://cmu.app.box.com/folder/290094222331 and place them in the `data/` directory.
+## Development
+Create a data directory to store shared data files.
+
+```bash
+mkdir data
+export CONTEXTPERT_DATA_DIR=data
+```
+
+Set up rclone
+```bash
+conda install conda-forge::rclone
+rclone config
+# Follow prompts to set up Box remote
+```
+
+Sync this with the remote data repository to push or pull any changes to data, results, or other large files. 
+Run this at the start and end of your work session to keep everything up to date.
+```bash
+rclone bisync box:/Contextualized\ Perturbation\ Modeling $CONTEXTPERT_DATA_DIR
+```
+
+## Create the Dataset from Scratch
+Follow instructions in `data_download/README.md` to prepare the data from original sources.
+
+To download preprocessed data, simply run:
+```bash
+mkdir data
+export CONTEXTPERT_DATA_DIR=data  # or your data path
+rclone sync box:/Contextualized\ Perturbation\ Modeling $CONTEXTPERT_DATA_DIR
+```
 
 For debugging, consider making a smaller version of the dataset with the first 1000 rows
 ```bash
