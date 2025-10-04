@@ -1,0 +1,1 @@
+wget -P $CONTEXTPERT_RAW_DATA_DIR/hgnc/ storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt
